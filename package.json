@@ -8,8 +8,9 @@
   "scripts": {
     "test": "ts-node --transpile-only scripts/test.ts",
     "build": "ts-node --transpile-only scripts/build.ts",
-    "dev": "npm-watch",
-    "build:defs": "ts-node scripts/dev"
+    "dev": "npm-watch build:defs",
+    "build:defs": "ts-node --transpile-only scripts/dev.ts",
+    "extract-model-height": "ts-node scripts/extract-model-height.ts"
   },
   "dependencies": {
     "w3ts": "^3.0.2"
@@ -23,7 +24,7 @@
     "lua-types": "^2.13.1",
     "luamin": "^1.0.4",
     "mdx-m3-viewer-th": "^5.13.0",
-    "npm-watch": "0.6.0",
+    "npm-watch": "^0.13.0",
     "ts-node": "8.10.2",
     "tsconfig-paths": "3.9.0",
     "tsutils": "3.17.1",
@@ -32,7 +33,10 @@
     "war3-objectdata-th": "^0.2.8",
     "war3-transformer": "^3.0.9",
     "war3tstlhelper": "1.0.1",
-    "winston": "^3.8.2"
+    "winston": "^3.8.2",
+    "war3-types-strict": "^0.1.3",
+    "war3-model": "^4.0.0",
+    "@jamiephan/casclib": "2.0.0-dev.5"
   },
   "watch": {
     "build:defs": {
