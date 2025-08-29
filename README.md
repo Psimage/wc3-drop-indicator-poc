@@ -56,6 +56,12 @@ Its pivot point stays at (0,0,0) but the quad is moved up on Z axis (3 for HP an
 * Does not update after scale change (Bloodlust) or model change (Polymorph).
 * Requires high frequency timer that might affect performance?
 
+## Drawbacks of native AddSpecialEffectTarget()
+
+* Inherits unit's model tint (e.g. on Forest Troll Berserker tints green) that can't be changed
+* Position is based on model's 'overhead' attachment. Can result in hiding itself with HP bar (HP is drawn on top). Mitigation - place is much higher / use up/down animation?
+* Bug? Disappears after polymorph
+
 ## Misc notes
 
 * HP bar width is based on `selection circle` model and is effected by (Art - Selection Scale).
