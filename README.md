@@ -14,7 +14,7 @@ Based on WC3 TypeScript template [wc3-ts-template](https://cipherxof.github.io/w
 
 ## Implementation overview
 
-The over HP icon is a SpecialEffect whose position is updated every 0.01 seconds.
+The over HP icon is a SpecialEffect (using 'billboard' model) whose position is updated every 0.01 seconds.
 
 ### HP bar position formula
 
@@ -45,7 +45,7 @@ HP bar pivot position is different for HP and HP+MP bars.
 For HP bar it is almost at the top of HP bar, but for HP+MP bar it is between bars.
 Just drawing icon slightly higher (add Z offset to) results in icon shifting relative to HP bar
 on certain camera angles.
-To reduce this effect, we instead update Z position of effect's model (model uses `billboard` flag).
+To reduce this effect, we instead update Z position of effect's model.
 Its pivot point stays at (0,0,0) but the quad is moved up on Z axis (3 for HP and 15 for HP+MP).
 
 ## Drawbacks (compared to native AddSpecialEffectTarget())
