@@ -14,6 +14,8 @@ Based on WC3 TypeScript template [wc3-ts-template](https://cipherxof.github.io/w
 
 ## Implementation overview
 
+<img width="100" height="131" alt="image" src="https://github.com/user-attachments/assets/d9e4ab41-472f-4246-ad03-22d1b1cb4cbb" />
+
 The over HP icon is a SpecialEffect (using 'billboard' model) whose position is updated every 0.01 seconds.
 
 ### HP bar position formula
